@@ -83,6 +83,24 @@
         return;
       }
 
+      // const { data, error } = await supabase.auth.signInWithPassword({
+      //   username,
+      //   passwordValue
+      // })
+
+      // if (error) {
+      //   alert('Login failed: ' + error.message)
+      //   return
+      // }
+
+      // // Supabase automatically stores the session in localStorage,
+      // // but we can double-check or add custom handling
+      // localStorage.setItem('supabase.auth.token', JSON.stringify(data.session))
+
+      // alert('Login successful!')
+      // window.location.href = 'dashboard.html'
+
+
       const { data, error } = await supabase
         .from("admins")
         .select("*")
